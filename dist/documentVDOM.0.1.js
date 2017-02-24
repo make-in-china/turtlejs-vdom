@@ -4879,3 +4879,4 @@ var $$$ = VNodeHelp;
 exports.VDOM = VDOM;
 exports.$$$ = $$$;
 exports.appendNodes = appendNodes;
+exports.isVHTMLElement = isVHTMLElement;
