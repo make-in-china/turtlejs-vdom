@@ -1,0 +1,25 @@
+{
+  "name": "turtlejs-vdom",
+  "version": "1.0.0",
+  "description": "turtlejs-vdom",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/make-in-china/turtlejs-vdom.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/make-in-china/turtlejs-vdom/issues"
+  },
+  "homepage": "https://github.com/make-in-china/turtlejs-vdom#readme",
+  "dependencies": {
+    "del": "^2.2.2",
+    "gulp-typescript": "^3.1.5",
+    "merge2": "^1.0.3",
+    "moment": "^2.17.1"
+  }
+}

@@ -4,10 +4,10 @@ class AttributeParser {
         node.removeAttribute('ref');
         KeyArrayHashObjectManage.push($t.refs, refName.split(','), node);
     }
-    ":"(node, outerChildNodes, outerElement, props, part) {
-        execNodeQuestion(node, outerChildNodes, outerElement, props, part);
-        setQuestionAtrr(node, outerChildNodes, outerElement, props, part);
-    }
+    // ":"(node, outerChildNodes, outerElement, props, part) {
+    //     execNodeQuestion(node, outerChildNodes, outerElement, props, part);
+    //     setQuestionAtrr(node, outerChildNodes, outerElement, props, part);
+    // }
     'p-ref'(node, outerChildNodes, outerElement, props, part) {
         let refName = takeAttr(node, 'p-ref');
         let arrRefName: string[]
