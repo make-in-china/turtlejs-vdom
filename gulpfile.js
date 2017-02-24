@@ -38,20 +38,21 @@ function init(){
             );
             // tsResult.pipe(sourcemaps.init()).pipe(sourcemaps.write('../maps', {addComment: false}))
         merge([
-            tsResult.js.pipe(gulp.dest('dest')),
-            tsResult.dts.pipe(gulp.dest('dest'))])
+            tsResult.js.pipe(gulp.dest('dist')),
+            tsResult.dts.pipe(gulp.dest('dist'))])
     }
 }
+init();
 gulp.task('vdom1',function(){
-    init();
     doTSC('UIHelper/export/DocumentVDOM.ts','documentVDOM.0.1.js')
 });
 gulp.task('vdom',function(){
-    init();
     doTSC('UIHelper/export/VDOM.ts','VDOM.0.1.js')
 });
+gulp.task('all', ['vdom', 'vdom1']); 
 gulp.task('default',function(){
     console.log(`任务列表：
     vdom      构建 VDOM.js
-    vdom1     构建 documentVDOM.js`);
+    vdom1     构建 documentVDOM.js
+    all       全构建`);
 });
