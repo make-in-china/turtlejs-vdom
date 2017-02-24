@@ -44,11 +44,11 @@ function init(){
 }
 gulp.task('vdom1',function(){
     init();
-    doTSC('UIHelper/export/DocumentVDOM.ts','virtual/documentVDOM.0.1.js')
+    doTSC('UIHelper/export/DocumentVDOM.ts','documentVDOM.0.1.js')
 });
 gulp.task('vdom',function(){
     init();
-    doTSC('UIHelper/export/VDOM.ts','virtual/VDOM.0.1.js')
+    doTSC('UIHelper/export/VDOM.ts','VDOM.0.1.js')
 });
 gulp.task('default',function(){
     console.log(`任务列表：
