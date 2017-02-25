@@ -44,10 +44,10 @@ function init(){
 }
 init();
 gulp.task('vdom1',function(){
-    doTSC('UIHelper/export/DocumentVDOM.ts','documentVDOM.0.1.js')
+    doTSC('main/DocumentVDOM.ts','documentVDOM.0.1.js')
 });
 gulp.task('vdom',function(){
-    doTSC('UIHelper/export/VDOM.ts','VDOM.0.1.js')
+    doTSC('main/VDOM.ts','VDOM.0.1.js')
 });
 gulp.task('all', ['vdom', 'vdom1']); 
 gulp.task('default',function(){
