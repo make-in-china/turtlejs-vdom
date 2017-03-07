@@ -4363,7 +4363,7 @@ var VMDOM;
 "use strict";
 /**
  * 遍历树
- * @param {T[]|IArray} array 数组或类数组
+ * @param {T[]|IArray<T>} array 数组或类数组
  * @param {string} propertyName 数组元素包含的属性名
  * @param {(node:T,step?:ITreeEachStep)=>eTreeEach|undefined} fn 回调函数
  * @param {number} beginIndex 遍历起始位置
@@ -4394,11 +4394,12 @@ function treeEach(array, propertyName, fn, beginIndex) {
             if (obj2 && obj2 != obj && !(8 /* c_noRepeat */ & ret)) {
                 ret = ret | 2 /* c_repeat */;
             }
-            if (obj2 && obj2[propertyName] && obj2[propertyName].length > 0 && !(ret & 4 /* c_noIn */) && propertyName) {
+            var childArr = obj2[propertyName];
+            if (obj2 && childArr && childArr.length > 0 && !(ret & 4 /* c_noIn */)) {
                 stack.push(arr);
                 stack.push(i + (ret & 2 /* c_repeat */ ? 0 : state.nextStepLength));
                 i = 0;
-                arr = obj2[propertyName];
+                arr = childArr;
             }
             else {
                 i += (ret & 2 /* c_repeat */ ? 0 : state.nextStepLength);
@@ -4422,7 +4423,7 @@ function treeEach(array, propertyName, fn, beginIndex) {
 "use strict";
 /// <reference path='BaseVNode.ts'/>
 /// <reference path='VDomhelperElement.ts'/>
-/// <reference path='../../lib/TreeEach.ts'/>
+/// <reference path='../lib/TreeEach.ts'/>
 var VDOM = (function () {
     function VDOM() {
     }
@@ -4873,9 +4874,9 @@ VDOM.parseStructor = function (html, vNode, endChar) {
 };
 var $$$ = VNodeHelp;
 "use strict";
-/// <reference path='../../node/bringDocument/Index.ts'/>
-/// <reference path='../../element/bringDocument/Index.ts'/>
-/// <reference path='../VDom.ts'/>
+/// <reference path='../node/bringDocument/Index.ts'/>
+/// <reference path='../element/bringDocument/Index.ts'/>
+/// <reference path='../vdom/VDom.ts'/>
 exports.VDOM = VDOM;
 exports.$$$ = $$$;
 exports.appendNodes = appendNodes;
