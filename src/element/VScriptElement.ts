@@ -1,5 +1,5 @@
 
-/// <reference path="../../core/node.ts"/>
+/// <reference path="../../../core/node.ts"/>
 interface VNodeNames{
     "script":VMDOM.VScriptElement
 }

@@ -1,4 +1,4 @@
-/// <reference path="../../core/EventEmitterEx.ts"/>
+/// <reference path="../../../core/EventEmitterEx.ts"/>
 namespace VMDOM{
     export class VNodeVMData{
         data:string=""

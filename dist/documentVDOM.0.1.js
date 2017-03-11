@@ -393,7 +393,7 @@ var EventEmitterEx = (function (_super) {
     return EventEmitterEx;
 }(EventEmitter));
 "use strict";
-/// <reference path="../../core/EventEmitterEx.ts"/>
+/// <reference path="../../../core/EventEmitterEx.ts"/>
 var VMDOM;
 (function (VMDOM) {
     var VNodeVMData = (function () {
@@ -460,8 +460,8 @@ var IAttr = (function () {
     return IAttr;
 }());
 "use strict";
-/// <reference path="../../lib/is.ts"/>
-/// <reference path="../../lib/IAttr.ts"/>
+/// <reference path="../../../lib/is.ts"/>
+/// <reference path="../../../lib/IAttr.ts"/>
 var VNamedNodeMap = (function () {
     function VNamedNodeMap() {
         this._length = 0;
@@ -1009,10 +1009,10 @@ var VMDOM;
 /// <reference path='.d.ts'/>
 /// <reference path='VNamedNodeMap.ts'/>
 /// <reference path='VStyle.ts'/>
-/// <reference path='../../lib/HashObject.ts'/>
-/// <reference path='../../lib/ClassList.ts'/>
-/// <reference path='../../lib/Lib.ts'/>
-/// <reference path='../../lib/TypeHelper.ts'/>
+/// <reference path='../../../lib/HashObject.ts'/>
+/// <reference path='../../../lib/ClassList.ts'/>
+/// <reference path='../../../lib/Lib.ts'/>
+/// <reference path='../../../lib/TypeHelper.ts'/>
 /// <reference path='VNodeList.ts'/>
 /// <reference path='VHTMLCollection.ts'/>
 /// <reference path='VNodeVMData.ts'/>
@@ -2035,8 +2035,8 @@ function isTextNode(node) {
 "use strict";
 /// <reference path='VNode.ts'/>
 /// <reference path='VElement.ts'/>
-/// <reference path='../../lib/Encode.ts'/>
-/// <reference path='../../core/Node.ts'/>
+/// <reference path='../../../lib/Encode.ts'/>
+/// <reference path='../../../core/Node.ts'/>
 /// <reference path='Lib.ts'/>
 function isVHTMLElement(node) {
     return node.nodeType === 1 /* Element */;
@@ -2347,7 +2347,7 @@ var VMDOM;
     });
 })(VMDOM || (VMDOM = {}));
 "use strict";
-/// <reference path="../../core/node.ts"/>
+/// <reference path="../../../core/node.ts"/>
 var VMDOM;
 (function (VMDOM) {
     var VScriptElement = (function (_super) {

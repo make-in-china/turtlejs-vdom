@@ -1,8 +1,8 @@
 
 /// <reference path='VNode.ts'/>
 /// <reference path='VElement.ts'/>
-/// <reference path='../../lib/Encode.ts'/>
-/// <reference path='../../core/Node.ts'/>
+/// <reference path='../../../lib/Encode.ts'/>
+/// <reference path='../../../core/Node.ts'/>
 /// <reference path='Lib.ts'/>
 function isVHTMLElement(node: VMDOM.VNode): node is VMDOM.VHTMLElement {
     return node.nodeType === ENodeType.Element

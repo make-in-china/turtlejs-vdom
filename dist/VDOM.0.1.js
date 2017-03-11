@@ -208,8 +208,8 @@ var IAttr = (function () {
     return IAttr;
 }());
 "use strict";
-/// <reference path="../../lib/is.ts"/>
-/// <reference path="../../lib/IAttr.ts"/>
+/// <reference path="../../../lib/is.ts"/>
+/// <reference path="../../../lib/IAttr.ts"/>
 var VNamedNodeMap = (function () {
     function VNamedNodeMap() {
         this._length = 0;
@@ -853,7 +853,7 @@ var EventEmitterEx = (function (_super) {
     return EventEmitterEx;
 }(EventEmitter));
 "use strict";
-/// <reference path="../../core/EventEmitterEx.ts"/>
+/// <reference path="../../../core/EventEmitterEx.ts"/>
 var VMDOM;
 (function (VMDOM) {
     var VNodeVMData = (function () {
@@ -969,10 +969,10 @@ var VMDOM;
 /// <reference path='.d.ts'/>
 /// <reference path='VNamedNodeMap.ts'/>
 /// <reference path='VStyle.ts'/>
-/// <reference path='../../lib/HashObject.ts'/>
-/// <reference path='../../lib/ClassList.ts'/>
-/// <reference path='../../lib/Lib.ts'/>
-/// <reference path='../../lib/TypeHelper.ts'/>
+/// <reference path='../../../lib/HashObject.ts'/>
+/// <reference path='../../../lib/ClassList.ts'/>
+/// <reference path='../../../lib/Lib.ts'/>
+/// <reference path='../../../lib/TypeHelper.ts'/>
 /// <reference path='VNodeList.ts'/>
 /// <reference path='VHTMLCollection.ts'/>
 /// <reference path='VNodeVMData.ts'/>
@@ -1875,8 +1875,8 @@ function isTextNode(node) {
 "use strict";
 /// <reference path='VNode.ts'/>
 /// <reference path='VElement.ts'/>
-/// <reference path='../../lib/Encode.ts'/>
-/// <reference path='../../core/Node.ts'/>
+/// <reference path='../../../lib/Encode.ts'/>
+/// <reference path='../../../core/Node.ts'/>
 /// <reference path='Lib.ts'/>
 function isVHTMLElement(node) {
     return node.nodeType === 1 /* Element */;
@@ -3290,7 +3290,7 @@ var VMDOM;
     VMDOM.VQElement = VQElement;
 })(VMDOM || (VMDOM = {}));
 "use strict";
-/// <reference path="../../core/node.ts"/>
+/// <reference path="../../../core/node.ts"/>
 var VMDOM;
 (function (VMDOM) {
     var VScriptElement = (function (_super) {
@@ -4026,7 +4026,7 @@ var VMDOM;
 "use strict";
 /**
  * 遍历树
- * @param {T[]|IArray} array 数组或类数组
+ * @param {T[]|IArray<T>} array 数组或类数组
  * @param {string} propertyName 数组元素包含的属性名
  * @param {(node:T,step?:ITreeEachStep)=>eTreeEach|undefined} fn 回调函数
  * @param {number} beginIndex 遍历起始位置
@@ -4057,11 +4057,12 @@ function treeEach(array, propertyName, fn, beginIndex) {
             if (obj2 && obj2 != obj && !(8 /* c_noRepeat */ & ret)) {
                 ret = ret | 2 /* c_repeat */;
             }
-            if (obj2 && obj2[propertyName] && obj2[propertyName].length > 0 && !(ret & 4 /* c_noIn */) && propertyName) {
+            var childArr = obj2[propertyName];
+            if (obj2 && childArr && childArr.length > 0 && !(ret & 4 /* c_noIn */)) {
                 stack.push(arr);
                 stack.push(i + (ret & 2 /* c_repeat */ ? 0 : state.nextStepLength));
                 i = 0;
-                arr = obj2[propertyName];
+                arr = childArr;
             }
             else {
                 i += (ret & 2 /* c_repeat */ ? 0 : state.nextStepLength);
@@ -4085,7 +4086,7 @@ function treeEach(array, propertyName, fn, beginIndex) {
 "use strict";
 /// <reference path='BaseVNode.ts'/>
 /// <reference path='VDomhelperElement.ts'/>
-/// <reference path='../../lib/TreeEach.ts'/>
+/// <reference path='../lib/TreeEach.ts'/>
 var VDOM = (function () {
     function VDOM() {
     }
@@ -4536,7 +4537,8 @@ VDOM.parseStructor = function (html, vNode, endChar) {
 };
 var $$$ = VNodeHelp;
 "use strict";
-/// <reference path='../VDom.ts'/>
+/// <reference path='../vdom/VDom.ts'/>
 exports.VDOM = VDOM;
 exports.$$$ = $$$;
 exports.appendNodes = appendNodes;
+exports.isVHTMLElement = isVHTMLElement;

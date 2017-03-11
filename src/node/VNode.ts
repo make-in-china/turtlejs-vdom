@@ -2,10 +2,10 @@
 /// <reference path='.d.ts'/>
 /// <reference path='VNamedNodeMap.ts'/>
 /// <reference path='VStyle.ts'/>
-/// <reference path='../../lib/HashObject.ts'/>
-/// <reference path='../../lib/ClassList.ts'/>
-/// <reference path='../../lib/Lib.ts'/>
-/// <reference path='../../lib/TypeHelper.ts'/>
+/// <reference path='../../../lib/HashObject.ts'/>
+/// <reference path='../../../lib/ClassList.ts'/>
+/// <reference path='../../../lib/Lib.ts'/>
+/// <reference path='../../../lib/TypeHelper.ts'/>
 /// <reference path='VNodeList.ts'/>
 /// <reference path='VHTMLCollection.ts'/>
 /// <reference path='VNodeVMData.ts'/>

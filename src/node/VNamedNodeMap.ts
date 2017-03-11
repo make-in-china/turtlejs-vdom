@@ -1,5 +1,5 @@
-/// <reference path="../../lib/is.ts"/>
-/// <reference path="../../lib/IAttr.ts"/>
+/// <reference path="../../../lib/is.ts"/>
+/// <reference path="../../../lib/IAttr.ts"/>
 class VNamedNodeMap{
     [index:number]:IAttr
     private _length:number=0;
