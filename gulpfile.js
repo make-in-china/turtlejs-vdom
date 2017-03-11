@@ -1,6 +1,13 @@
 ﻿
 var gulp = require('gulp');
 
+gulp.task('default',function(){
+    console.log(`任务列表：
+    vdom      构建 VDOM.js
+    vdom1     构建 documentVDOM.js
+    all       全构建`);
+});
+
 var tsconfig={
     // outFile:,
     // "noImplicitAny": true,
@@ -44,15 +51,9 @@ function init(){
 }
 init();
 gulp.task('vdom1',function(){
-    doTSC('main/DocumentVDOM.ts','documentVDOM.0.1.js')
+    doTSC('src/main/DocumentVDOM.ts','documentVDOM.0.1.js')
 });
 gulp.task('vdom',function(){
-    doTSC('main/VDOM.ts','VDOM.0.1.js')
+    doTSC('src/main/VDOM.ts','VDOM.0.1.js')
 });
 gulp.task('all', ['vdom', 'vdom1']); 
-gulp.task('default',function(){
-    console.log(`任务列表：
-    vdom      构建 VDOM.js
-    vdom1     构建 documentVDOM.js
-    all       全构建`);
-});
