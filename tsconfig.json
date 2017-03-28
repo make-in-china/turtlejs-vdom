@@ -11,6 +11,6 @@
         // "noUnusedLocals":true
     },
     "exclude": [
-        "dist/*"
+        "./dist/*"
     ]
 }
